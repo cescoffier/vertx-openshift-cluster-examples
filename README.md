@@ -20,3 +20,18 @@ Once launched, open your browser to:
 2. http://localhost:8081
 
 ## OpenShift build
+
+```bash
+mvn clean fabric8:deploy -Popenshift
+```
+
+Once deployed, set the number of replicas to 2.
+
+Use curl as follows (update route url):
+
+```bash
+curl http://shared-counter-example-myproject.192.168.64.12.nip.io/counter/inc
+curl http://shared-counter-example-myproject.192.168.64.12.nip.io/counter/inc
+```
+
+You should see the request handled by the 2 nodes and incrementing the counter accordingly.
