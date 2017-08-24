@@ -1,4 +1,4 @@
-# Shared Coutner Example
+# Shared Counter Example
 
 This example illustrate how Vert.x applications can share a counter.
 
