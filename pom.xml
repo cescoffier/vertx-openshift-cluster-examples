@@ -12,6 +12,7 @@
 
   <modules>
     <module>shared-counter-example</module>
+    <module>eventbus-example</module>
   </modules>
 
   <properties>

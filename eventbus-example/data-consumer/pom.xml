@@ -6,16 +6,15 @@
 
   <parent>
     <groupId>io.vertx.openshift</groupId>
-    <artifactId>vertx-openshift-cluster-examples</artifactId>
+    <artifactId>eventbus-example</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>shared-counter-example</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <artifactId>data-consumer</artifactId>
+
 
   <properties>
     <vertx.verticle>io.vertx.openshift.counter.MyMainVerticle</vertx.verticle>
-    <vertx.launcher>io.vertx.openshift.counter.Main</vertx.launcher>
   </properties>
 
   <dependencies>
@@ -95,7 +94,7 @@
                   <pod>
                     <property>
                       <name>cluster</name>
-                      <value>${project.artifactId}</value>
+                      <value>vertx-cluster</value>
                     </property>
                   </pod>
                 </labels>
@@ -124,5 +123,4 @@
       </dependencies>
     </profile>
   </profiles>
-
 </project>

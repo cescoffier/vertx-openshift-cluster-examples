@@ -6,16 +6,14 @@
 
   <parent>
     <groupId>io.vertx.openshift</groupId>
-    <artifactId>vertx-openshift-cluster-examples</artifactId>
+    <artifactId>eventbus-example</artifactId>
     <version>1.0-SNAPSHOT</version>
   </parent>
 
-  <artifactId>shared-counter-example</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <artifactId>data-producer</artifactId>
 
   <properties>
     <vertx.verticle>io.vertx.openshift.counter.MyMainVerticle</vertx.verticle>
-    <vertx.launcher>io.vertx.openshift.counter.Main</vertx.launcher>
   </properties>
 
   <dependencies>
@@ -29,15 +27,7 @@
     </dependency>
     <dependency>
       <groupId>io.vertx</groupId>
-      <artifactId>vertx-web</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>io.vertx</groupId>
       <artifactId>vertx-rx-java</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>io.vertx</groupId>
-      <artifactId>vertx-web-templ-freemarker</artifactId>
     </dependency>
   </dependencies>
 
@@ -82,20 +72,12 @@
               </execution>
             </executions>
             <configuration>
-              <enricher>
-                <config>
-                  <vertx-health-check>
-                    <path>/</path>
-                  </vertx-health-check>
-                </config>
-              </enricher>
-
               <resources>
                 <labels>
                   <pod>
                     <property>
                       <name>cluster</name>
-                      <value>${project.artifactId}</value>
+                      <value>vertx-cluster</value>
                     </property>
                   </pod>
                 </labels>

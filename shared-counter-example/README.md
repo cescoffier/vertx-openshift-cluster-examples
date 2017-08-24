@@ -1,6 +1,6 @@
 # Shared Counter Example
 
-This example illustrate how Vert.x applications can share a counter.
+This example illustrates how Vert.x applications can share a counter.
 
 
 ## Local build and run
