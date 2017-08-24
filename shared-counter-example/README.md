@@ -25,7 +25,10 @@ Once launched, open your browser to:
 mvn clean fabric8:deploy -Popenshift
 ```
 
-Once deployed, set the number of replicas to 2.
+Once deployed, set the number of replicas to 2 with:
+```bash
+oc scale dc shared-counter-example --replicas=2
+```
 
 Use curl as follows (update route url):
 
